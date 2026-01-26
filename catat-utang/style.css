@@ -1,0 +1,278 @@
+:root {
+  --bg: #f6f1e9;
+  --ink: #1f1f1f;
+  --muted: #5b5b5b;
+  --accent: #2c6e49;
+  --accent-dark: #1f5236;
+  --card: #fff7ed;
+  --border: #d8cdbb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Gill Sans", "Helvetica", sans-serif;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.hero {
+  background: linear-gradient(180deg, #f6f1e9 0%, #efe3d3 100%);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 20px 32px;
+  text-align: left;
+}
+
+.badge {
+  display: inline-block;
+  background: #fff1c9;
+  color: #5a4300;
+  border: 1px solid #e2c980;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  font-size: clamp(32px, 7vw, 54px);
+  margin: 14px 0 10px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: clamp(16px, 4.2vw, 22px);
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.cta {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 18px 20px;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.cta-strong {
+  background: #d9480f;
+  padding: 20px 22px;
+  font-size: 22px;
+}
+
+.hero-list {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.hero-list li {
+  margin: 6px 0;
+}
+
+.social-proof {
+  margin-top: 16px;
+  background: #f2eadf;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.proof-list p {
+  margin: 8px 0;
+  font-weight: 700;
+}
+
+.proof-item span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: -2px;
+}
+
+.micro {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.tool {
+  margin-top: 24px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 14px 12px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid #c9b89a;
+  background: #fff;
+}
+
+button {
+  font-family: inherit;
+}
+
+.primary {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 16px 18px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.secondary {
+  flex: 1;
+  background: #f0e6d9;
+  color: var(--ink);
+  border: 2px solid var(--border);
+  padding: 14px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ghost {
+  background: transparent;
+  border: 2px dashed var(--border);
+  color: var(--muted);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+#list li {
+  background: #fff;
+  border: 2px solid #e4d7c3;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.item-title {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.item-meta {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.paywall {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.paywall-box {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  border: 2px solid var(--border);
+}
+
+.paywall-box h3 {
+  margin: 0 0 6px;
+}
+
+.paywall-box p {
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.paywall-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 12px;
+}
+
+.paywall-list li {
+  background: #f6f1e9;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.price {
+  font-weight: 800;
+}
+
+@media (min-width: 720px) {
+  .cta, .primary {
+    width: auto;
+  }
+}

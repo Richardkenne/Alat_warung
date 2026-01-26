@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catat Utang Warung - Gratis, Cepat, Tanpa Buku</title>
+  <meta name="description" content="Alat gratis untuk catat utang pelanggan warung. Total utang langsung terlihat. Tidak perlu buku, bisa dipakai offline tanpa akun." />
+  <meta name="keywords" content="catat utang warung, buku utang warung, cara mencatat utang, catatan utang pelanggan" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <section class="hero" id="top">
+      <div class="badge">Tanpa akun • Offline</div>
+      <!-- VERSION A -->
+      <!-- <h1>Jangan Lupa Utang Pelanggan.</h1>
+      <p class="subtitle">Banyak warung kehilangan uang karena lupa.</p>
+      <ul class="hero-list">
+        <li>Catat utang pelanggan</li>
+        <li>Lihat total utang</li>
+        <li>Tidak perlu buku</li>
+      </ul>
+      <button class="cta cta-strong" data-scroll="tool">Mulai Catat Utang Sekarang</button> -->
+      <!-- VERSION B -->
+      <h1>Uang Hilang Karena Utang?</h1>
+      <p class="subtitle">Catat semua utang pelanggan sebelum lupa — dalam 10 detik.</p>
+      <ul class="hero-list">
+        <li>Tidak perlu buku</li>
+        <li>Total utang langsung terlihat</li>
+        <li>Gratis dipakai</li>
+      </ul>
+      <button class="cta cta-strong" data-scroll="tool">Catat Utang (Gratis)</button>
+    </section>
+
+    <section class="social-proof">
+      <h3>Dipakai oleh warung kecil di Indonesia</h3>
+      <div class="proof-list">
+        <div class="proof-item">
+          <p>“Sekarang tidak lupa siapa yang utang”</p>
+          <span>— Pemilik warung</span>
+        </div>
+        <div class="proof-item">
+          <p>“Lebih rapi dari buku”</p>
+          <span>— Pemilik warung</span>
+        </div>
+        <div class="proof-item">
+          <p>“Gratis dan gampang”</p>
+          <span>— Pemilik warung</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool" id="tool">
+      <h2>Catat Utang</h2>
+      <div class="card">
+        <label>
+          Nama pelanggan
+          <input id="nama" type="text" placeholder="Contoh: Pak Budi" />
+        </label>
+        <label>
+          Jumlah utang (IDR)
+          <input id="jumlah" type="number" inputmode="numeric" min="0" placeholder="Contoh: 15000" />
+        </label>
+        <label>
+          Catatan (opsional)
+          <input id="catatan" type="text" placeholder="Contoh: bayar besok" />
+        </label>
+        <button class="primary" id="simpan">Simpan Utang</button>
+      </div>
+
+      <div class="card">
+        <p class="micro">Klik fitur di bawah untuk lihat versi PRO.</p>
+        <div class="row">
+          <h3>Daftar Utang</h3>
+          <button class="ghost" id="hapusSemua">Hapus Semua</button>
+        </div>
+        <ul id="list"></ul>
+        <div class="total">Total: <span id="total">Rp 0</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Fitur Tambahan</h3>
+        <div class="row">
+          <button class="secondary" data-paywall>Export PDF</button>
+          <button class="secondary" data-paywall>Ingatkan via WhatsApp</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="paywall" id="paywall" aria-hidden="true">
+    <div class="paywall-box">
+      <h3>Biar Utang Tidak Lupa</h3>
+      <p>Versi PRO bantu ingatkan pelanggan dan simpan riwayat.</p>
+      <ul class="paywall-list">
+        <li>Pengingat WhatsApp</li>
+        <li>Riwayat utang</li>
+        <li>Export PDF</li>
+      </ul>
+      <p class="price">Rp 50.000 / bulan</p>
+      <p class="micro">Bayar hanya jika butuh fitur PRO.</p>
+      <button class="primary" id="upgrade">Upgrade</button>
+      <button class="ghost" id="tutup">Tutup</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
