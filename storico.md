@@ -12,6 +12,10 @@
 - Stabilità > nuove feature
 
 ## Log modifiche
+### 2026-01-27 12:01 WIB
+- Test manuale link e meta: OK (tutti relativi, meta tecnici presenti)
+- Copy safety popup PRO (utang): aggiornato testo informativo
+- Esito test CTA WhatsApp/PDF: FAIL (bottoni non aprono link reali) — richiesto via conferma prima di fix
 ### 2026-01-27
 - Dominio collegato a GitHub Pages
 - Homepage pubblicata
