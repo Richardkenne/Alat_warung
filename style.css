@@ -272,6 +272,18 @@ button {
   letter-spacing: 0.3px;
 }
 
+.site-footer{
+  margin-top:40px;
+  padding-top:16px;
+  border-top:1px solid #eee;
+  font-size:14px;
+  color:#666;
+}
+.site-footer a{
+  color:inherit;
+  text-decoration:underline;
+}
+
 @media (min-width: 720px) {
   .btn {
     width: auto;
