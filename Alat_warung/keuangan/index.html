@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catat Keuangan Harian</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main>
+    <a class="back-link" href="../index.html">← Kembali ke Alat Warung</a>
+    <section class="hero">
+      <h1>Catat Keuangan Warung</h1>
+      <p class="subtitle">Lihat untung atau rugi hari ini — cepat dan simpel.</p>
+      <ul class="hero-list">
+        <li>Tidak perlu hitung rumit</li>
+        <li>Tidak perlu buku</li>
+        <li>Gratis dipakai</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <label>
+        Uang Masuk Hari Ini
+        <input id="masuk" type="number" placeholder="Contoh: 200000" />
+      </label>
+      <label>
+        Uang Keluar Hari Ini
+        <input id="keluar" type="number" placeholder="Contoh: 150000" />
+      </label>
+      <button class="btn" id="hitung">Hitung</button>
+    </section>
+
+    <section class="card">
+      <h3>Untung / Rugi Hari Ini:</h3>
+      <div class="total" id="hasil">Rp 0</div>
+    </section>
+
+    <footer class="site-footer">
+  <p>Alat sederhana untuk warung kecil di Indonesia.</p>
+  <p><a href="../index.html">Home</a></p>
+  <p><strong>Panduan:</strong></p>
+  <p>
+    <a href="../cara-mencatat-utang-warung.html">Cara mencatat utang warung</a><br>
+    <a href="../cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a><br>
+    <a href="../cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
+  </p>
+</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
