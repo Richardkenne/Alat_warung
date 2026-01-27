@@ -12,6 +12,10 @@
 - Stabilità > nuove feature
 
 ## Log modifiche
+### 2026-01-27 12:04 WIB
+- Fix kritis CTA: WhatsApp dibuat link wa.me statis
+- Export PDF dihapus (tidak ada PDF nyata, lebih baik tidak tampil)
+- Alasan: menghindari tombol palsu sebelum ads
 ### 2026-01-27 12:01 WIB
 - Test manuale link e meta: OK (tutti relativi, meta tecnici presenti)
 - Copy safety popup PRO (utang): aggiornato testo informativo
