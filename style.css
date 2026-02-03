@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Sora:wght@400;600;700;800&display=swap");
 
 :root {
   --bg: #f7f2ea;
@@ -21,7 +21,7 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Plus Jakarta Sans", "Helvetica", "Arial", sans-serif;
+  font-family: "Sora", "Helvetica", "Arial", sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -53,12 +53,20 @@ a {
   box-shadow: var(--shadow);
 }
 
-h1 {
+h1, h2, h3 {
   font-size: clamp(30px, 7vw, 50px);
   margin: 0 0 10px;
   line-height: 1.1;
-  font-family: "Fraunces", "Plus Jakarta Sans", serif;
+  font-family: "DM Serif Display", "Sora", serif;
   letter-spacing: -0.2px;
+}
+
+h2 {
+  font-size: clamp(22px, 5vw, 30px);
+}
+
+h3 {
+  font-size: 20px;
 }
 
 .subtitle {
