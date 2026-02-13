@@ -15,3 +15,8 @@ Klik dua kali `index.html` atau buka dari browser.
 2. Upload semua file di folder ini.
 3. Aktifkan GitHub Pages.
 4. Link akan muncul.
+
+## Homepage redesign (Feb 2026)
+- **What changed:** `index.html` updated into a modern SaaS landing page focused on Utang + AI WhatsApp reminder. Added `shared.js` for the AI message demo and analytics hooks, and new scoped homepage styles in `style.css`.
+- **Where to edit copy:** hero, sections, and FAQ text live in `index.html`.
+- **WhatsApp templates:** defined in `shared.js` inside `buildMessage()` with tone variants (Sopan / Netral / Tegas).
