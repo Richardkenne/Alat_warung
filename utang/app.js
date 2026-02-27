@@ -1,4 +1,5 @@
 const STORAGE_KEY = "catat-utang-items";
+const db = window.alatWarungDB;
 
 const elNama = document.getElementById("nama");
 const elJumlah = document.getElementById("jumlah");
@@ -25,13 +26,21 @@ function saveItems(items) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
 }
 
-function render() {
-  const items = loadItems();
+async function render() {
+  // Try Supabase first, fallback localStorage
+  let items = null;
+  if (db && db.isOnline()) {
+    items = await db.fetchDebts();
+  }
+  if (!items) {
+    items = loadItems();
+  }
+
   elList.innerHTML = "";
   let total = 0;
 
   items.forEach((item, index) => {
-    total += item.jumlah;
+    total += Number(item.jumlah);
     const li = document.createElement("li");
 
     const title = document.createElement("div");
@@ -45,7 +54,10 @@ function render() {
     const del = document.createElement("button");
     del.className = "ghost";
     del.textContent = "Hapus";
-    del.addEventListener("click", () => {
+    del.addEventListener("click", async () => {
+      if (item.id && db && db.isOnline()) {
+        await db.deleteDebt(item.id);
+      }
       const updated = loadItems();
       updated.splice(index, 1);
       saveItems(updated);
@@ -61,7 +73,7 @@ function render() {
   elTotal.textContent = rupiah(total);
 }
 
-function addItem() {
+async function addItem() {
   const nama = elNama.value.trim();
   const jumlah = Number(elJumlah.value);
   const catatan = elCatatan.value.trim();
@@ -71,15 +83,16 @@ function addItem() {
     return;
   }
 
+  // Save localStorage
   const items = loadItems();
-  items.unshift({
-    nama,
-    jumlah,
-    catatan,
-    waktu: Date.now()
-  });
-
+  items.unshift({ nama, jumlah, catatan, waktu: Date.now() });
   saveItems(items);
+
+  // Save Supabase (non-blocking)
+  if (db && db.isOnline()) {
+    db.addDebt(nama, jumlah, catatan);
+  }
+
   elNama.value = "";
   elJumlah.value = "";
   elCatatan.value = "";
@@ -97,7 +110,7 @@ function hidePaywall() {
 }
 
 elSimpan.addEventListener("click", addItem);
-elHapusSemua.addEventListener("click", () => {
+elHapusSemua.addEventListener("click", async () => {
   if (confirm("Hapus semua utang?")) {
     saveItems([]);
     render();

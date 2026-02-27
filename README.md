@@ -1,22 +1,32 @@
 # Alat Warung
 
-Ini adalah kumpulan alat sederhana untuk warung.
+Alat gratis untuk pemilik warung & UMKM di Indonesia. Catat utang, stok, dan keuangan langsung di browser HP.
 
-## Cara coba
-Klik dua kali `index.html` atau buka dari browser.
+**Live:** [alatwarung.id](https://alatwarung.id)
 
-## Cara pakai
-- Utang: catat siapa yang utang.
-- Keuangan: lihat untung hari ini.
-- Stok: ingat barang habis.
+## Alat
+- **Catat Utang** (`utang/`) — simpan nama & jumlah utang, kirim tagihan via WhatsApp
+- **Catat Stok** (`stok/`) — tandai barang habis/ada
+- **Hitung Keuangan** (`keuangan/`) — masuk - keluar = untung/rugi
 
-## Cara publish online
-1. Buat repo di GitHub.
-2. Upload semua file di folder ini.
-3. Aktifkan GitHub Pages.
-4. Link akan muncul.
+## Tech
+- Vanilla HTML/CSS/JS — no build step
+- Tailwind CSS (CDN) for homepage
+- localStorage (offline-first)
+- Supabase backend (optional, for Pro sync) — schema in `supabase/`
 
-## Homepage redesign (Feb 2026)
-- **What changed:** `index.html` updated into a modern SaaS landing page focused on Utang + AI WhatsApp reminder. Added `shared.js` for the AI message demo and analytics hooks, and new scoped homepage styles in `style.css`.
-- **Where to edit copy:** hero, sections, and FAQ text live in `index.html`.
-- **WhatsApp templates:** defined in `shared.js` inside `buildMessage()` with tone variants (Sopan / Netral / Tegas).
+## Cara dev
+Buka `index.html` di browser. Tidak perlu server.
+
+## Struktur
+```
+index.html           — Homepage (ID)
+index-en.html        — Homepage (EN)
+shared.js            — AI WhatsApp message generator
+utang/               — Debt tracker
+stok/                — Stock tracker
+keuangan/            — Finance calculator
+supabase/            — Backend schema + client
+cara-mencatat-*.html — SEO articles
+.claude/CLAUDE.md    — AI project instructions
+```

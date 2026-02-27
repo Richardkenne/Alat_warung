@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://alatwarung.id/index-en.html" />
+  <link rel="alternate" hreflang="id" href="https://alatwarung.id/" />
+  <link rel="alternate" hreflang="en" href="https://alatwarung.id/index-en.html" />
+
+  <title>Alat Warung - Track Debt, Stock & Finances for Your Shop</title>
+  <meta name="description" content="Track customer debt, manage stock, and calculate daily profit in 10 seconds. Free, lightweight, built for Indonesian warung & small shops." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'] },
+          colors: { brand: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 500:'#10b981', 600:'#059669', 700:'#047857' } }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    #toast { opacity:0; transform:translateY(-8px); transition:opacity 150ms ease, transform 150ms ease; pointer-events:none; }
+    #toast.toast-show { opacity:.88; transform:translateY(0); pointer-events:auto; }
+    #toast.toast-hide { transition-duration:250ms; }
+    .stat-number { font-variant-numeric:tabular-nums; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+    .float { animation:float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="home font-sans text-slate-900 bg-white">
+
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="/" class="flex items-center gap-2.5">
+        <div class="h-9 w-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-extrabold text-sm">AW</div>
+        <span class="text-lg font-bold tracking-tight">Alat Warung</span>
+      </a>
+      <nav class="hidden items-center gap-5 text-[13px] font-semibold text-slate-500 md:flex">
+        <a class="hover:text-slate-900 transition" href="#features">Features</a>
+        <a class="hover:text-slate-900 transition" href="#ai-demo">AI Reminders</a>
+        <a class="hover:text-slate-900 transition" href="#testimonials">Testimonials</a>
+        <a class="hover:text-slate-900 transition" href="#pricing">Pricing</a>
+        <a class="hover:text-slate-900 transition" href="#faq">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a class="hidden md:inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100" href="./index.html">ID</a>
+        <a class="hidden md:inline-flex rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./utang/index.html">Start Free</a>
+        <button id="menuToggle" class="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 md:hidden" aria-label="Menu">
+          <svg class="h-5 w-5 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden">
+      <nav class="flex flex-col gap-3 text-sm font-semibold text-slate-700">
+        <a class="py-1.5" href="#features">Features</a>
+        <a class="py-1.5" href="#ai-demo">AI Reminders</a>
+        <a class="py-1.5" href="#testimonials">Testimonials</a>
+        <a class="py-1.5" href="#pricing">Pricing</a>
+        <a class="py-1.5" href="#faq">FAQ</a>
+        <a class="mt-2 rounded-full bg-emerald-600 px-5 py-2.5 text-center text-sm text-white" href="./utang/index.html">Start Free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-5">
+
+    <section class="py-16 md:py-24" id="hero">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+            Free for warung & small shops
+          </div>
+          <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-[44px] md:leading-[1.15]">
+            Track debt, stock & finances in <span class="text-emerald-600">10 seconds</span>
+          </h1>
+          <p class="max-w-lg text-base leading-relaxed text-slate-500 md:text-lg">
+            Most warung lose money because debts go untracked. With Alat Warung, everything's recorded on your phone — and you can send payment reminders via WhatsApp.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a class="rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-200/50 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./utang/index.html">Start Tracking Debt — Free</a>
+            <a class="rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:bg-slate-50 js-scroll-ai" href="#ai-demo">Try AI Reminders</a>
+          </div>
+          <div class="flex items-center gap-3 pt-2">
+            <div class="flex -space-x-2">
+              <div class="h-8 w-8 rounded-full bg-emerald-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-emerald-800">A</div>
+              <div class="h-8 w-8 rounded-full bg-amber-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-amber-800">D</div>
+              <div class="h-8 w-8 rounded-full bg-blue-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-blue-800">H</div>
+              <div class="h-8 w-8 rounded-full bg-rose-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-rose-800">S</div>
+            </div>
+            <div class="text-sm text-slate-500"><span class="font-bold text-slate-700">500+</span> shops already using it</div>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-[320px]">
+          <div class="rounded-[2rem] border-[3px] border-slate-800 bg-slate-900 p-2 shadow-2xl">
+            <div class="rounded-[1.6rem] bg-white overflow-hidden">
+              <div class="flex items-center justify-between bg-emerald-600 px-4 py-2.5 text-white text-xs font-semibold"><span>Alat Warung</span><span>Debts</span></div>
+              <div class="bg-emerald-50 px-4 py-4 text-center">
+                <p class="text-[10px] font-semibold text-emerald-700 uppercase tracking-wider">Total Debt</p>
+                <p class="text-2xl font-extrabold text-slate-900 mt-0.5">Rp 150,000</p>
+              </div>
+              <div class="divide-y divide-slate-100 px-4">
+                <div class="flex items-center justify-between py-3"><div><p class="text-sm font-semibold">Pak Budi</p><p class="text-[11px] text-slate-400">Unpaid</p></div><span class="text-sm font-bold text-emerald-600">Rp 50,000</span></div>
+                <div class="flex items-center justify-between py-3"><div><p class="text-sm font-semibold">Bu Rina</p><p class="text-[11px] text-slate-400">Rice 5kg</p></div><span class="text-sm font-bold text-emerald-600">Rp 75,000</span></div>
+                <div class="flex items-center justify-between py-3"><div><p class="text-sm font-semibold">Mbak Sari</p><p class="text-[11px] text-slate-400">Cooking oil</p></div><span class="text-sm font-bold text-emerald-600">Rp 25,000</span></div>
+              </div>
+              <div class="p-4"><div class="rounded-xl bg-emerald-600 py-2.5 text-center text-sm font-semibold text-white">+ Add Debt</div></div>
+            </div>
+          </div>
+          <div class="float absolute -right-4 -bottom-3 rounded-xl bg-white border border-slate-200 px-3 py-2 shadow-lg text-xs font-semibold text-slate-700 flex items-center gap-1.5">
+            <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            Remind via WA
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-2xl bg-slate-50 border border-slate-100 py-6">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4 text-center">
+        <div><p class="stat-number text-2xl font-extrabold text-slate-900 md:text-3xl">500+</p><p class="text-xs font-semibold text-slate-400 mt-0.5">Active Shops</p></div>
+        <div><p class="stat-number text-2xl font-extrabold text-slate-900 md:text-3xl">3</p><p class="text-xs font-semibold text-slate-400 mt-0.5">Free Tools</p></div>
+        <div><p class="stat-number text-2xl font-extrabold text-slate-900 md:text-3xl">10 sec</p><p class="text-xs font-semibold text-slate-400 mt-0.5">Time to Record</p></div>
+        <div><p class="stat-number text-2xl font-extrabold text-slate-900 md:text-3xl">100%</p><p class="text-xs font-semibold text-slate-400 mt-0.5">Free</p></div>
+      </div>
+    </section>
+
+    <section class="flex flex-wrap items-center justify-center gap-3 py-10 text-xs font-semibold text-slate-500">
+      <span class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5">
+        <svg class="h-3.5 w-3.5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Data stored safely
+      </span>
+      <span class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5">🇮🇩 Made in Indonesia</span>
+      <span class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5">
+        <svg class="h-3.5 w-3.5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        Works offline
+      </span>
+      <span class="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5">
+        <svg class="h-3.5 w-3.5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        No app install needed
+      </span>
+    </section>
+
+    <section class="py-12" id="features">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">3 Free Tools</p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">Everything your shop needs</h2>
+        <p class="mx-auto mt-3 max-w-lg text-sm text-slate-500">No expensive apps. Open in your phone browser, start using right away.</p>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <a href="./utang/index.html" class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg hover:border-emerald-200 hover:-translate-y-1">
+          <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-2xl">📝</div>
+          <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">Track Debts</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">Save customer names and amounts. See your total instantly. Send reminders via WhatsApp.</p>
+          <div class="mt-4 flex items-center gap-1 text-sm font-semibold text-emerald-600">Open tool <svg class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></div>
+        </a>
+        <a href="./stok/index.html" class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg hover:border-emerald-200 hover:-translate-y-1">
+          <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-2xl">📦</div>
+          <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">Track Stock</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">Mark items as available or out of stock. No more running back and forth to check.</p>
+          <div class="mt-4 flex items-center gap-1 text-sm font-semibold text-emerald-600">Open tool <svg class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></div>
+        </a>
+        <a href="./keuangan/index.html" class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg hover:border-emerald-200 hover:-translate-y-1">
+          <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-2xl">💰</div>
+          <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">Calculate Finances</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-500">Enter money in and out. Know right away if you made or lost money today.</p>
+          <div class="mt-4 flex items-center gap-1 text-sm font-semibold text-emerald-600">Open tool <svg class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="py-12" id="how-it-works">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">How it works</p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">3 steps, 10 seconds</h2>
+      </div>
+      <div class="mt-10 grid gap-8 md:grid-cols-3">
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-xl font-extrabold text-emerald-700">1</div>
+          <h3 class="font-bold">Open on your phone</h3>
+          <p class="mt-1 text-sm text-slate-500">No download needed. Just open alatwarung.id in your browser.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-xl font-extrabold text-emerald-700">2</div>
+          <h3 class="font-bold">Enter your data</h3>
+          <p class="mt-1 text-sm text-slate-500">Type a name, amount, save. Done.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-xl font-extrabold text-emerald-700">3</div>
+          <h3 class="font-bold">Remind via WhatsApp</h3>
+          <p class="mt-1 text-sm text-slate-500">AI writes a polite message. Just copy and send.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── VIDEO ─── -->
+    <section class="py-12" id="video">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">See it in action</p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">25 seconds, instantly clear</h2>
+        <p class="mx-auto mt-3 max-w-lg text-sm text-slate-500">Watch this short video — see why hundreds of warung owners already use Alat Warung.</p>
+      </div>
+      <div class="mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl border border-slate-200 bg-black shadow-xl">
+        <video class="w-full" controls preload="metadata" poster="video/poster.jpg">
+          <source src="video/promo-voce-musica.mp4" type="video/mp4" />
+          Your browser does not support video.
+        </video>
+      </div>
+    </section>
+
+    <section class="rounded-3xl border border-slate-200 bg-slate-50 p-6 md:p-10" id="ai-demo">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">AI WhatsApp Demo</p>
+          <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">Create payment reminders in seconds</h2>
+          <p class="mt-2 text-sm text-slate-500">Fill in details, pick a tone, copy to WhatsApp. No auto-send.</p>
+        </div>
+        <span class="shrink-0 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700">Safe — no auto-send</span>
+      </div>
+      <div class="mt-8 grid gap-6 lg:grid-cols-2">
+        <div class="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <label class="block text-sm font-semibold text-slate-700">Customer name <input id="waName" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-100" type="text" placeholder="e.g. Bu Rina" /></label>
+          <label class="block text-sm font-semibold text-slate-700">Debt amount (Rp) <input id="waAmount" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-100" type="number" inputmode="numeric" placeholder="e.g. 25000" /></label>
+          <label class="block text-sm font-semibold text-slate-700">Due date (optional) <input id="waDue" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-100" type="date" /></label>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">Pick a tone</p>
+            <div class="mt-1.5 flex flex-wrap gap-2">
+              <label class="flex items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-600 cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50 has-[:checked]:text-emerald-700"><input class="accent-emerald-600" type="radio" name="tone" value="sopan" checked /> Polite</label>
+              <label class="flex items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-600 cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50 has-[:checked]:text-emerald-700"><input class="accent-emerald-600" type="radio" name="tone" value="netral" /> Neutral</label>
+              <label class="flex items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-600 cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50 has-[:checked]:text-emerald-700"><input class="accent-emerald-600" type="radio" name="tone" value="tegas" /> Firm</label>
+            </div>
+          </div>
+          <button id="generateMessage" class="w-full rounded-xl bg-emerald-600 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700">Generate Message (AI)</button>
+          <p class="text-[11px] text-slate-400">Tip: use Polite for long-time customers.</p>
+        </div>
+        <div class="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <label class="block text-sm font-semibold text-slate-700">WhatsApp Message <textarea id="waMessage" class="mt-1.5 h-40 w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-100" rows="6"></textarea></label>
+          <div class="flex flex-wrap gap-3">
+            <button id="copyMessage" class="flex-1 rounded-xl bg-slate-900 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">Copy Message</button>
+            <a id="waLink" class="flex-1 rounded-xl border border-emerald-200 bg-emerald-50 py-3 text-center text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100" target="_blank" rel="noopener">Open WhatsApp</a>
+          </div>
+          <p class="text-[11px] text-slate-400">You stay in control. We never auto-send.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16" id="testimonials">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">Testimonials</p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">Trusted by shop owners across Indonesia</h2>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">"No more customers forgetting to pay. I just send them a WhatsApp and they pay right away."</p>
+          <div class="mt-4 flex items-center gap-3"><div class="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center text-sm font-bold text-emerald-700">A</div><div><p class="text-sm font-bold text-slate-900">Bu Ani</p><p class="text-xs text-slate-400">Warung Berkah, Bandung</p></div></div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">"Super simple. Even my husband who's not tech-savvy can use it. Stock tracking is a lifesaver."</p>
+          <div class="mt-4 flex items-center gap-3"><div class="h-10 w-10 rounded-full bg-amber-100 flex items-center justify-center text-sm font-bold text-amber-700">D</div><div><p class="text-sm font-bold text-slate-900">Mbak Dewi</p><p class="text-xs text-slate-400">Toko Sejahtera, Surabaya</p></div></div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">"I used to have no idea if I was making money. Now I check every day — takes 10 seconds."</p>
+          <div class="mt-4 flex items-center gap-3"><div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-700">H</div><div><p class="text-sm font-bold text-slate-900">Pak Hendra</p><p class="text-xs text-slate-400">Warung Maju, Jakarta</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12" id="pricing">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">Pricing</p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">Free to start. Pro to grow.</h2>
+      </div>
+      <div class="mx-auto mt-10 grid max-w-3xl gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-7">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Free</p>
+          <p class="mt-3 text-4xl font-extrabold text-slate-900">Rp 0</p>
+          <p class="mt-1 text-sm text-slate-400">Forever</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600">
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Unlimited debt tracking</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> AI WhatsApp messages</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Stock tracking</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Daily finance calculator</li>
+            <li class="flex items-start gap-2 text-slate-300"><svg class="mt-0.5 h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/></svg><span> Data on 1 device only</span></li>
+          </ul>
+          <a class="mt-7 block rounded-xl border border-slate-200 py-3 text-center text-sm font-semibold text-slate-700 transition hover:bg-slate-50" href="./utang/index.html">Start Free</a>
+        </div>
+        <div class="relative rounded-2xl border-2 border-emerald-500 bg-white p-7 shadow-lg shadow-emerald-100/50">
+          <span class="absolute -top-3 right-5 rounded-full bg-emerald-600 px-3 py-1 text-[11px] font-bold text-white">Popular</span>
+          <p class="text-xs font-bold uppercase tracking-wider text-emerald-600">Pro</p>
+          <p class="mt-3 text-4xl font-extrabold text-slate-900">Rp 29,000</p>
+          <p class="mt-1 text-sm text-slate-400">/ month</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600">
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> All Free features</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Cloud sync</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Access from multiple devices</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Export reports (PDF)</li>
+            <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Auto backup</li>
+          </ul>
+          <a class="mt-7 block rounded-xl bg-emerald-600 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./utang/index.html">Try Pro — Coming Soon</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 border-t border-slate-100" id="faq">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">FAQ</p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">Frequently asked questions</h2>
+      </div>
+      <div class="mx-auto mt-8 max-w-2xl space-y-3">
+        <details class="group rounded-xl border border-slate-200 bg-white px-5 py-4">
+          <summary class="cursor-pointer text-sm font-semibold flex items-center justify-between">Is it really free? <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-500">Yes, 100% free. Track debts, stock, and finances without paying anything. Pro is optional if you want cloud sync.</p>
+        </details>
+        <details class="group rounded-xl border border-slate-200 bg-white px-5 py-4">
+          <summary class="cursor-pointer text-sm font-semibold flex items-center justify-between">Do I need to download an app? <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-500">Nope. Open alatwarung.id in your phone browser (Chrome, Safari) and start using it. You can also save it to your home screen.</p>
+        </details>
+        <details class="group rounded-xl border border-slate-200 bg-white px-5 py-4">
+          <summary class="cursor-pointer text-sm font-semibold flex items-center justify-between">Where is my data stored? <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-500">Free version: on your phone (browser localStorage). Pro version: securely in the cloud, accessible from any device.</p>
+        </details>
+        <details class="group rounded-xl border border-slate-200 bg-white px-5 py-4">
+          <summary class="cursor-pointer text-sm font-semibold flex items-center justify-between">Does it auto-send WhatsApp messages? <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-500">No. We only create the message template. You copy and send it yourself. You're always in control.</p>
+        </details>
+        <details class="group rounded-xl border border-slate-200 bg-white px-5 py-4">
+          <summary class="cursor-pointer text-sm font-semibold flex items-center justify-between">How is this different from BukuWarung or CrediBook? <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-500">Alat Warung is built to be as lightweight as possible — no download, no login, works right in your browser. Plus we have AI WhatsApp message generation that other apps don't offer.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="my-12 rounded-3xl bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 text-center text-white md:p-12">
+      <h2 class="text-2xl font-extrabold tracking-tight md:text-4xl">Start tracking your shop's debts today</h2>
+      <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-emerald-100">Free, no download, AI-powered. Join 500+ shop owners already using it.</p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a class="rounded-full bg-white px-7 py-3 text-sm font-bold text-emerald-700 shadow-md transition hover:-translate-y-0.5" href="./utang/index.html">Start Tracking — Free</a>
+        <a class="rounded-full border border-white/30 px-7 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10 js-scroll-ai" href="#ai-demo">Try AI Reminders</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-100 bg-slate-50 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-start md:justify-between">
+      <div>
+        <div class="flex items-center gap-2"><div class="h-8 w-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-xs">AW</div><span class="font-bold">Alat Warung</span></div>
+        <p class="mt-2 max-w-xs text-sm text-slate-400">Free tools for small shops and MSMEs in Indonesia. Made with love in Bandung.</p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm">
+        <div>
+          <p class="font-semibold text-slate-700 mb-2">Tools</p>
+          <ul class="space-y-1.5 text-slate-400">
+            <li><a class="hover:text-slate-700 transition" href="./utang/index.html">Track Debts</a></li>
+            <li><a class="hover:text-slate-700 transition" href="./stok/index.html">Track Stock</a></li>
+            <li><a class="hover:text-slate-700 transition" href="./keuangan/index.html">Calculate Finances</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-700 mb-2">Guides</p>
+          <ul class="space-y-1.5 text-slate-400">
+            <li><a class="hover:text-slate-700 transition" href="./cara-mencatat-utang-warung.html">How to track debt</a></li>
+            <li><a class="hover:text-slate-700 transition" href="./cara-mencatat-stok-warung.html">How to track stock</a></li>
+            <li><a class="hover:text-slate-700 transition" href="./cara-mencatat-keuangan-warung.html">How to track finances</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-slate-200 px-5 pt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
+      <span>&copy; 2026 Alat Warung. Made in Indonesia.</span>
+      <div class="flex gap-4">
+        <a class="hover:text-slate-600 transition" href="./privacy.html">Privacy Policy</a>
+        <a class="hover:text-slate-600 transition" href="./terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-0 left-0 right-0 z-40 border-t border-slate-200 bg-white px-4 py-2.5 shadow-lg md:hidden">
+    <div class="mx-auto flex max-w-6xl gap-2.5">
+      <a class="flex-1 rounded-xl bg-emerald-600 py-2.5 text-center text-sm font-semibold text-white" href="./utang/index.html">Start Free</a>
+      <a class="flex-1 rounded-xl border border-slate-200 py-2.5 text-center text-sm font-semibold text-slate-700 js-scroll-ai" href="#ai-demo">Try AI</a>
+    </div>
+  </div>
+
+  <a href="https://wa.me/6281234567890?text=Hi%2C%20I%20have%20a%20question%20about%20Alat%20Warung" target="_blank" rel="noopener" class="fixed bottom-20 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition hover:scale-110 hover:bg-green-600 md:bottom-6">
+    <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.076-1.104l-.292-.173-3.032.795.81-2.957-.19-.3A8 8 0 1112 20z"/></svg>
+  </a>
+
+  <div id="toast" class="fixed right-5 top-5 z-50 rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Message copied</div>
+
+  <script>
+    const menuBtn = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    }
+  </script>
+  <script src="shared-en.js"></script>
+</body>
+</html>

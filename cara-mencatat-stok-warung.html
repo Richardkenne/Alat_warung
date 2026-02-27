@@ -8,62 +8,119 @@
   <title>Cara Mencatat Stok Warung Supaya Barang Tidak Habis</title>
   <meta name="description" content="Cara mudah mencatat stok warung supaya tidak kehabisan barang. Contoh catatan stok warung kecil yang sederhana dan gratis.">
   <meta name="keywords" content="cara mencatat stok warung, catatan stok warung, barang habis warung, stok warung sederhana">
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(900px circle at 10% 10%, rgba(16,185,129,0.12), transparent 50%),
+        radial-gradient(700px circle at 90% 0%, rgba(251,146,60,0.12), transparent 45%),
+        #f8fafc;
+    }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
-  <main>
-    <section class="hero">
-      <h1>Cara Mencatat Stok Warung Supaya Tidak Kehabisan Barang</h1>
-      <p class="subtitle">Banyak warung kehilangan penjualan karena barang habis tanpa sadar. Biasanya stok hanya diingat di kepala. Kalau lupa, pelanggan pergi.</p>
+<body class="font-sans text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="./index.html" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-extrabold">AW</div>
+        <span class="text-lg font-bold">Alat Warung</span>
+      </a>
+      <div class="hidden items-center gap-3 md:flex">
+        <a class="rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:bg-slate-50" href="./index.html">Home</a>
+        <a class="rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./stok/index.html">Mulai Gratis</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto flex max-w-4xl flex-col gap-10 px-6 pt-12 pb-24 md:pt-16 md:pb-28">
+    <section class="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-gradient-to-b from-emerald-50/70 via-white to-white p-8 md:p-12">
+      <div class="absolute -top-24 right-0 z-0 h-72 w-72 rounded-full bg-emerald-200/20 blur-3xl"></div>
+      <div class="relative z-10 space-y-4">
+        <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Panduan</div>
+        <h1 class="text-3xl font-semibold tracking-tight leading-tight md:text-4xl">Cara Mencatat Stok Warung Supaya Tidak Kehabisan Barang</h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-slate-600">Banyak warung kehilangan penjualan karena barang habis tanpa sadar. Biasanya stok hanya diingat di kepala. Kalau lupa, pelanggan pergi.</p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Masalah Umum Stok Warung</h2>
-      <ul class="hero-list">
-        <li>Lupa barang yang harus dibeli</li>
-        <li>Tidak sadar stok hampir habis</li>
-        <li>Kehilangan penjualan</li>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Masalah Umum Stok Warung</h2>
+      <ul class="mt-4 space-y-2 text-slate-600">
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Lupa barang yang harus dibeli</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Tidak sadar stok hampir habis</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Kehilangan penjualan</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Cara Sederhana Mencatat Stok Warung</h2>
-      <p>Mencatat stok tidak perlu rumit. Cukup tahu barang mana yang masih ada dan mana yang habis.</p>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Cara Sederhana Mencatat Stok Warung</h2>
+      <p class="mt-3 text-slate-600">Mencatat stok tidak perlu rumit. Cukup tahu barang mana yang masih ada dan mana yang habis.</p>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Alat Gratis untuk Catat Stok Warung</h2>
-      <p>Di bawah ini ada alat sederhana untuk mencatat stok warung. Tinggal tandai barang yang sudah habis.</p>
-      <a class="btn btn-strong" href="./stok/index.html">Pakai Alat Catat Stok Warung</a>
+    <section class="rounded-3xl border-2 border-emerald-200 bg-emerald-50/50 p-6 md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Alat Gratis untuk Catat Stok Warung</h2>
+      <p class="mt-3 text-slate-600">Di bawah ini ada alat sederhana untuk mencatat stok warung. Tinggal tandai barang yang sudah habis.</p>
+      <a class="mt-5 inline-block rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./stok/index.html">Pakai Alat Catat Stok Warung</a>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Kenapa Penting Mencatat Stok Warung</h2>
-      <ul class="hero-list">
-        <li>Tidak kehilangan penjualan</li>
-        <li>Tidak lupa belanja barang</li>
-        <li>Warung lebih rapi</li>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Kenapa Penting Mencatat Stok Warung</h2>
+      <ul class="mt-4 space-y-2 text-slate-600">
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Tidak kehilangan penjualan</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Tidak lupa belanja barang</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Warung lebih rapi</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Baca juga</h2>
-      <ul class="hero-list">
-        <li><a href="./cara-mencatat-utang-warung.html">Cara mencatat utang warung</a></li>
-        <li><a href="./cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a></li>
-      </ul>
-      <a class="btn btn-strong" href="./stok/index.html">Pakai Alat Catat Stok Warung</a>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Baca juga</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        <a class="rounded-xl border border-slate-200/70 bg-slate-50 p-4 transition hover:shadow-md" href="./cara-mencatat-utang-warung.html">
+          <p class="font-semibold text-slate-900">Cara mencatat utang warung</p>
+          <p class="mt-1 text-sm text-slate-500">Supaya tidak lupa siapa yang utang</p>
+        </a>
+        <a class="rounded-xl border border-slate-200/70 bg-slate-50 p-4 transition hover:shadow-md" href="./cara-mencatat-keuangan-warung.html">
+          <p class="font-semibold text-slate-900">Cara mencatat keuangan warung</p>
+          <p class="mt-1 text-sm text-slate-500">Tahu untung atau rugi harian</p>
+        </a>
+      </div>
+      <a class="mt-5 inline-block rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./stok/index.html">Pakai Alat Catat Stok Warung</a>
     </section>
-<footer class="site-footer">
-  <p>Alat sederhana untuk warung kecil di Indonesia.</p>
-  <p><a href="./index.html">Home</a></p>
-  <p><strong>Panduan:</strong></p>
-  <p>
-    <a href="./cara-mencatat-utang-warung.html">Cara mencatat utang warung</a><br>
-    <a href="./cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a><br>
-    <a href="./cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
-  </p>
-</footer>
   </main>
+
+  <footer class="border-t border-slate-200 bg-white/60 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+      <p>Alat sederhana untuk warung kecil di Indonesia.</p>
+      <div class="flex flex-wrap gap-4">
+        <a class="hover:text-slate-700" href="./cara-mencatat-utang-warung.html">Cara mencatat utang warung</a>
+        <a class="hover:text-slate-700" href="./cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a>
+        <a class="hover:text-slate-700" href="./cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

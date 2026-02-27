@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kebijakan Privasi - Alat Warung</title>
+  <meta name="description" content="Kebijakan privasi Alat Warung — cara kami menyimpan dan melindungi data Anda." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-slate-700 bg-white">
+  <header class="border-b border-slate-100 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-3xl items-center gap-2.5 px-5 py-4">
+      <a href="./" class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-xs">AW</div>
+        <span class="font-bold text-slate-900">Alat Warung</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-5 py-12">
+    <h1 class="text-3xl font-extrabold text-slate-900">Kebijakan Privasi</h1>
+    <p class="mt-2 text-sm text-slate-400">Terakhir diperbarui: 27 Februari 2026</p>
+
+    <div class="mt-8 space-y-8 text-sm leading-relaxed">
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">1. Data yang Kami Kumpulkan</h2>
+        <p class="mt-2"><strong>Versi Gratis:</strong> Semua data (utang, stok, keuangan) disimpan di perangkat Anda melalui browser localStorage. Kami <strong>tidak</strong> mengumpulkan, mengirim, atau menyimpan data Anda di server kami.</p>
+        <p class="mt-2"><strong>Versi Pro (opsional):</strong> Jika Anda memilih untuk mendaftar, kami menyimpan:</p>
+        <ul class="mt-2 list-disc pl-5 space-y-1">
+          <li>Nomor telepon (untuk login via OTP)</li>
+          <li>Nama warung (opsional)</li>
+          <li>Data utang, stok, dan keuangan yang Anda masukkan</li>
+        </ul>
+        <p class="mt-2">Data Pro disimpan di server Supabase yang terenkripsi.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">2. Bagaimana Kami Menggunakan Data</h2>
+        <ul class="mt-2 list-disc pl-5 space-y-1">
+          <li>Menyediakan layanan pencatatan utang, stok, dan keuangan</li>
+          <li>Sinkronisasi data antar perangkat (hanya Pro)</li>
+          <li>Mengirimkan OTP untuk verifikasi login</li>
+        </ul>
+        <p class="mt-2">Kami <strong>tidak</strong> menjual, menyewakan, atau membagikan data Anda kepada pihak ketiga untuk tujuan pemasaran.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">3. Keamanan Data</h2>
+        <p class="mt-2">Kami menggunakan enkripsi SSL/TLS untuk semua transfer data. Data Pro disimpan di infrastruktur Supabase dengan Row Level Security (RLS) — artinya hanya Anda yang bisa mengakses data Anda sendiri.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">4. Cookies & Analytics</h2>
+        <p class="mt-2">Situs ini tidak menggunakan cookies pelacakan. Kami mungkin menggunakan analytics sederhana (tanpa identifikasi personal) untuk memahami berapa banyak pengunjung.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">5. Hak Anda</h2>
+        <ul class="mt-2 list-disc pl-5 space-y-1">
+          <li><strong>Akses:</strong> Anda bisa melihat semua data Anda kapan saja di aplikasi</li>
+          <li><strong>Hapus:</strong> Anda bisa menghapus semua data kapan saja (versi Gratis: clear localStorage; versi Pro: hapus akun)</li>
+          <li><strong>Portabilitas:</strong> Fitur export tersedia di versi Pro</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">6. Perubahan Kebijakan</h2>
+        <p class="mt-2">Kami dapat memperbarui kebijakan ini. Perubahan akan dipublikasikan di halaman ini dengan tanggal terbaru.</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-slate-900">7. Kontak</h2>
+        <p class="mt-2">Jika ada pertanyaan tentang privasi, hubungi kami melalui WhatsApp atau email di halaman utama.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-100 py-6 text-center text-xs text-slate-400">
+    <a class="hover:text-slate-600" href="./">Kembali ke Alat Warung</a>
+  </footer>
+</body>
+</html>

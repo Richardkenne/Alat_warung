@@ -3,32 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://alatwarung.id/keuangan/index.html" />
-
-  <title>Catat Keuangan Harian</title>
+  <link rel="canonical" href="https://alatwarung.id/keuangan/" />
+  <title>Hitung Keuangan Warung — Alat Warung</title>
+  <meta name="description" content="Hitung uang masuk dan keluar warung hari ini. Langsung tau untung atau rugi. Gratis, tanpa akun." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <main>
     <a class="back-link" href="../index.html">← Kembali ke Alat Warung</a>
+
     <section class="hero">
-      <h1>Catat Keuangan Warung</h1>
-      <p class="subtitle">Lihat untung atau rugi hari ini — cepat dan simpel.</p>
+      <div class="badge">Gratis • Tanpa akun • Offline</div>
+      <h1>Hitung Keuangan Warung</h1>
+      <p class="subtitle">Tau untung atau rugi hari ini — cepat dan simpel.</p>
       <ul class="hero-list">
-        <li>Tidak perlu hitung rumit</li>
-        <li>Tidak perlu buku</li>
-        <li>Gratis dipakai</li>
+        <li>Gak perlu hitung rumit</li>
+        <li>Gak perlu buku</li>
+        <li>Gratis selamanya</li>
       </ul>
     </section>
 
     <section class="card">
+      <h2 class="section-title">Hitung Hari Ini</h2>
       <label>
-        Uang Masuk Hari Ini
-        <input id="masuk" type="number" placeholder="Contoh: 200000" />
+        Uang Masuk Hari Ini (Rp)
+        <input id="masuk" type="number" inputmode="numeric" placeholder="Contoh: 200000" />
       </label>
       <label>
-        Uang Keluar Hari Ini
-        <input id="keluar" type="number" placeholder="Contoh: 150000" />
+        Uang Keluar Hari Ini (Rp)
+        <input id="keluar" type="number" inputmode="numeric" placeholder="Contoh: 150000" />
       </label>
       <button class="btn" id="hitung">Hitung</button>
     </section>
@@ -38,16 +41,36 @@
       <div class="total" id="hasil">Rp 0</div>
     </section>
 
+    <section class="card">
+      <h3>Fitur Pro</h3>
+      <p class="micro">Sync keuangan ke cloud dan export laporan.</p>
+      <div class="row">
+        <button class="btn-ghost" data-paywall>Export PDF</button>
+        <button class="btn-ghost" data-paywall>Sync ke Cloud</button>
+      </div>
+    </section>
+
+    <div class="paywall" id="paywall" aria-hidden="true">
+      <div class="paywall-box">
+        <h3>Fitur Pro</h3>
+        <p>Sync data ke cloud, export PDF, akses dari banyak HP.</p>
+        <ul class="paywall-list">
+          <li>Sync data ke cloud</li>
+          <li>Export laporan PDF</li>
+          <li>Akses multi-device</li>
+        </ul>
+        <p class="price">Rp 29.000 / bulan</p>
+        <p class="micro">Fitur Pro sedang disiapkan. Belum ada pembayaran sekarang.</p>
+        <button class="btn" id="upgrade">Upgrade</button>
+        <button class="btn-ghost" id="tutup" style="margin-top:8px">Tutup</button>
+      </div>
+    </div>
+
     <footer class="site-footer">
-  <p>Alat sederhana untuk warung kecil di Indonesia.</p>
-  <p><a href="../index.html">Home</a></p>
-  <p><strong>Artikel:</strong></p>
-  <p>
-    <a href="../cara-mencatat-utang-warung.html">Cara mencatat utang warung</a><br>
-    <a href="../cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a><br>
-    <a href="../cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
-  </p>
-</footer>
+      <p>Alat gratis untuk warung kecil di Indonesia.</p>
+      <p><a href="../index.html">Home</a> · <a href="../utang/index.html">Catat Utang</a> · <a href="../stok/index.html">Catat Stok</a></p>
+      <p><a href="../privacy.html">Privasi</a> · <a href="../terms.html">Syarat</a></p>
+    </footer>
   </main>
 
   <script src="app.js"></script>

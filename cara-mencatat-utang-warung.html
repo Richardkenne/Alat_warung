@@ -8,83 +8,138 @@
   <title>Cara Mencatat Utang Warung dengan Mudah (Tanpa Buku)</title>
   <meta name="description" content="Cara sederhana mencatat utang pelanggan warung supaya tidak lupa dan tidak kehilangan uang. Contoh catatan utang warung yang bisa dipakai gratis.">
   <meta name="keywords" content="cara mencatat utang warung, buku utang warung, catatan utang pelanggan, contoh utang warung">
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(900px circle at 10% 10%, rgba(16,185,129,0.12), transparent 50%),
+        radial-gradient(700px circle at 90% 0%, rgba(251,146,60,0.12), transparent 45%),
+        #f8fafc;
+    }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
-  <main>
-    <section class="hero">
-      <h1>Cara Mencatat Utang Warung Supaya Tidak Lupa</h1>
-      <p class="subtitle">Banyak warung kecil kehilangan uang karena lupa utang pelanggan. Utang biasanya dicatat di buku, kertas, atau diingat di kepala. Masalahnya, buku bisa hilang dan ingatan bisa lupa.</p>
+<body class="font-sans text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="./index.html" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-extrabold">AW</div>
+        <span class="text-lg font-bold">Alat Warung</span>
+      </a>
+      <div class="hidden items-center gap-3 md:flex">
+        <a class="rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:bg-slate-50" href="./index.html">Home</a>
+        <a class="rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./utang/index.html">Mulai Gratis</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto flex max-w-4xl flex-col gap-10 px-6 pt-12 pb-24 md:pt-16 md:pb-28">
+    <section class="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-gradient-to-b from-emerald-50/70 via-white to-white p-8 md:p-12">
+      <div class="absolute -top-24 right-0 z-0 h-72 w-72 rounded-full bg-emerald-200/20 blur-3xl"></div>
+      <div class="relative z-10 space-y-4">
+        <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Panduan</div>
+        <h1 class="text-3xl font-semibold tracking-tight leading-tight md:text-4xl">Cara Mencatat Utang Warung Supaya Tidak Lupa</h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-slate-600">Banyak warung kecil kehilangan uang karena lupa utang pelanggan. Utang biasanya dicatat di buku, kertas, atau diingat di kepala. Masalahnya, buku bisa hilang dan ingatan bisa lupa.</p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Masalah Umum Saat Mencatat Utang Warung</h2>
-      <ul class="hero-list">
-        <li>Lupa siapa yang masih utang</li>
-        <li>Lupa jumlah utang</li>
-        <li>Buku utang hilang atau rusak</li>
-        <li>Malu menagih karena tidak yakin</li>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Masalah Umum Saat Mencatat Utang Warung</h2>
+      <ul class="mt-4 space-y-2 text-slate-600">
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Lupa siapa yang masih utang</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Lupa jumlah utang</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Buku utang hilang atau rusak</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-rose-400"></span>Malu menagih karena tidak yakin</li>
       </ul>
-      <p>Kalau ini sering terjadi, warung bisa rugi tanpa sadar.</p>
+      <p class="mt-4 text-sm text-slate-500">Kalau ini sering terjadi, warung bisa rugi tanpa sadar.</p>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Contoh Cara Mencatat Utang Warung (Cara Lama)</h2>
-      <p>Biasanya utang dicatat di buku tulis seperti ini: Nama pelanggan – jumlah utang – catatan kecil.</p>
-      <p>Masalahnya:</p>
-      <ul class="hero-list">
-        <li>Tidak rapi</li>
-        <li>Sulit dihitung totalnya</li>
-        <li>Mudah lupa</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Cara Lebih Mudah Mencatat Utang Warung</h2>
-      <p>Sekarang ada cara yang lebih gampang. Tanpa buku. Tanpa akun. Bisa langsung dipakai.</p>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Alat Gratis untuk Mencatat Utang Warung</h2>
-      <p>Di bawah ini ada alat sederhana untuk mencatat utang pelanggan. Cukup masukkan nama dan jumlah. Total utang langsung terlihat.</p>
-      <a class="btn btn-strong" href="utang/index.html">Pakai Alat Catat Utang Gratis</a>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Kenapa Alat Ini Cocok untuk Warung</h2>
-      <ul class="hero-list">
-        <li>Tidak perlu daftar</li>
-        <li>Bisa dipakai di HP</li>
-        <li>Bisa dipakai offline</li>
-        <li>Lebih rapi dari buku</li>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Contoh Cara Mencatat Utang Warung (Cara Lama)</h2>
+      <p class="mt-3 text-slate-600">Biasanya utang dicatat di buku tulis seperti ini: Nama pelanggan - jumlah utang - catatan kecil.</p>
+      <p class="mt-3 font-semibold text-slate-700">Masalahnya:</p>
+      <ul class="mt-2 space-y-2 text-slate-600">
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-400"></span>Tidak rapi</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-400"></span>Sulit dihitung totalnya</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-400"></span>Mudah lupa</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Kesimpulan</h2>
-      <p>Mencatat utang warung tidak harus ribet. Yang penting rapi dan tidak lupa. Kalau utang tercatat dengan baik, uang tidak mudah hilang.</p>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Cara Lebih Mudah Mencatat Utang Warung</h2>
+      <p class="mt-3 text-slate-600">Sekarang ada cara yang lebih gampang. Tanpa buku. Tanpa akun. Bisa langsung dipakai.</p>
     </section>
 
-    <a class="back-link" href="index.html">Lihat alat warung lainnya</a>
+    <section class="rounded-3xl border-2 border-emerald-200 bg-emerald-50/50 p-6 md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Alat Gratis untuk Mencatat Utang Warung</h2>
+      <p class="mt-3 text-slate-600">Di bawah ini ada alat sederhana untuk mencatat utang pelanggan. Cukup masukkan nama dan jumlah. Total utang langsung terlihat.</p>
+      <a class="mt-5 inline-block rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./utang/index.html">Pakai Alat Catat Utang Gratis</a>
+    </section>
 
-    <section class="card">
-      <h2 class="section-title">Baca juga</h2>
-      <ul class="hero-list">
-        <li><a href="./cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a></li>
-        <li><a href="./cara-mencatat-stok-warung.html">Cara mencatat stok warung</a></li>
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Kenapa Alat Ini Cocok untuk Warung</h2>
+      <ul class="mt-4 space-y-2 text-slate-600">
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Tidak perlu daftar</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Bisa dipakai di HP</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Bisa dipakai offline</li>
+        <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>Lebih rapi dari buku</li>
       </ul>
-      <a class="btn btn-strong" href="./utang/index.html">Pakai Alat Catat Utang Warung</a>
     </section>
-<footer class="site-footer">
-  <p>Alat sederhana untuk warung kecil di Indonesia.</p>
-  <p><a href="./index.html">Home</a></p>
-  <p><strong>Panduan:</strong></p>
-  <p>
-    <a href="./cara-mencatat-utang-warung.html">Cara mencatat utang warung</a><br>
-    <a href="./cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a><br>
-    <a href="./cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
-  </p>
-</footer>
+
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Kesimpulan</h2>
+      <p class="mt-3 text-slate-600">Mencatat utang warung tidak harus ribet. Yang penting rapi dan tidak lupa. Kalau utang tercatat dengan baik, uang tidak mudah hilang.</p>
+    </section>
+
+    <section class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:p-8">
+      <h2 class="text-xl font-semibold tracking-tight md:text-2xl">Baca juga</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        <a class="rounded-xl border border-slate-200/70 bg-slate-50 p-4 transition hover:shadow-md" href="./cara-mencatat-keuangan-warung.html">
+          <p class="font-semibold text-slate-900">Cara mencatat keuangan warung</p>
+          <p class="mt-1 text-sm text-slate-500">Tahu untung atau rugi harian</p>
+        </a>
+        <a class="rounded-xl border border-slate-200/70 bg-slate-50 p-4 transition hover:shadow-md" href="./cara-mencatat-stok-warung.html">
+          <p class="font-semibold text-slate-900">Cara mencatat stok warung</p>
+          <p class="mt-1 text-sm text-slate-500">Supaya barang tidak habis</p>
+        </a>
+      </div>
+      <a class="mt-5 inline-block rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-200/60 transition hover:-translate-y-0.5 hover:bg-emerald-700" href="./utang/index.html">Pakai Alat Catat Utang Warung</a>
+    </section>
   </main>
+
+  <footer class="border-t border-slate-200 bg-white/60 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+      <p>Alat sederhana untuk warung kecil di Indonesia.</p>
+      <div class="flex flex-wrap gap-4">
+        <a class="hover:text-slate-700" href="./cara-mencatat-utang-warung.html">Cara mencatat utang warung</a>
+        <a class="hover:text-slate-700" href="./cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a>
+        <a class="hover:text-slate-700" href="./cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

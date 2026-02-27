@@ -3,20 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://alatwarung.id/stok/index.html" />
-
-  <title>Catat Stok Warung</title>
+  <link rel="canonical" href="https://alatwarung.id/stok/" />
+  <title>Catat Stok Warung — Alat Warung</title>
+  <meta name="description" content="Tandai barang yang habis atau masih ada di warung. Gratis, tanpa akun, bisa offline." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <main>
     <a class="back-link" href="../index.html">← Kembali ke Alat Warung</a>
+
     <section class="hero">
+      <div class="badge">Gratis • Tanpa akun • Offline</div>
       <h1>Catat Stok Warung</h1>
-      <p class="subtitle">Supaya tidak lupa barang yang harus dibeli.</p>
+      <p class="subtitle">Supaya gak lupa barang yang harus dibeli lagi.</p>
+      <ul class="hero-list">
+        <li>Tandai barang habis atau ada</li>
+        <li>Gak perlu cek gudang bolak-balik</li>
+        <li>Gratis selamanya</li>
+      </ul>
     </section>
 
     <section class="card">
+      <h2 class="section-title">Tambah Barang</h2>
       <label>
         Nama Barang
         <input id="barang" type="text" placeholder="Contoh: Beras" />
@@ -29,16 +37,36 @@
       <ul id="daftar" class="list"></ul>
     </section>
 
+    <section class="card">
+      <h3>Fitur Pro</h3>
+      <p class="micro">Sync stok ke cloud dan export laporan.</p>
+      <div class="row">
+        <button class="btn-ghost" data-paywall>Export PDF</button>
+        <button class="btn-ghost" data-paywall>Sync ke Cloud</button>
+      </div>
+    </section>
+
+    <div class="paywall" id="paywall" aria-hidden="true">
+      <div class="paywall-box">
+        <h3>Fitur Pro</h3>
+        <p>Sync data ke cloud, export PDF, akses dari banyak HP.</p>
+        <ul class="paywall-list">
+          <li>Sync data ke cloud</li>
+          <li>Export laporan PDF</li>
+          <li>Akses multi-device</li>
+        </ul>
+        <p class="price">Rp 29.000 / bulan</p>
+        <p class="micro">Fitur Pro sedang disiapkan. Belum ada pembayaran sekarang.</p>
+        <button class="btn" id="upgrade">Upgrade</button>
+        <button class="btn-ghost" id="tutup" style="margin-top:8px">Tutup</button>
+      </div>
+    </div>
+
     <footer class="site-footer">
-  <p>Alat sederhana untuk warung kecil di Indonesia.</p>
-  <p><a href="../index.html">Home</a></p>
-  <p><strong>Artikel:</strong></p>
-  <p>
-    <a href="../cara-mencatat-utang-warung.html">Cara mencatat utang warung</a><br>
-    <a href="../cara-mencatat-keuangan-warung.html">Cara mencatat keuangan warung</a><br>
-    <a href="../cara-mencatat-stok-warung.html">Cara mencatat stok warung</a>
-  </p>
-</footer>
+      <p>Alat gratis untuk warung kecil di Indonesia.</p>
+      <p><a href="../index.html">Home</a> · <a href="../utang/index.html">Catat Utang</a> · <a href="../keuangan/index.html">Hitung Keuangan</a></p>
+      <p><a href="../privacy.html">Privasi</a> · <a href="../terms.html">Syarat</a></p>
+    </footer>
   </main>
 
   <script src="app.js"></script>
